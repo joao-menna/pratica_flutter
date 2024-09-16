@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pratica_flutter/screens/bmi_calculator.dart';
+import 'package:pratica_flutter/screens/money_converter.dart';
 import 'package:pratica_flutter/screens/todo_list.dart';
 
 class MainScreen extends StatelessWidget {
@@ -14,6 +15,21 @@ class MainScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const MoneyConverter();
+                      },
+                    ),
+                  );
+                },
+                child: const Text("Money Converter"),
+              ),
+              const SizedBox(
+                height: 16.0,
+              ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
