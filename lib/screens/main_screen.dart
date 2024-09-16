@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pratica_flutter/screens/bmi_calculator.dart';
 import 'package:pratica_flutter/screens/calculator.dart';
 import 'package:pratica_flutter/screens/money_converter.dart';
+import 'package:pratica_flutter/screens/stop_watch.dart';
 import 'package:pratica_flutter/screens/todo_list.dart';
 
 class MainScreen extends StatelessWidget {
@@ -48,6 +49,36 @@ class MainScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const TodoList();
+                      },
+                    ),
+                  );
+                },
+                child: const Text("To-Do List"),
+              ),
+              const SizedBox(
+                height: 16.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const StopWatch();
+                      },
+                    ),
+                  );
+                },
+                child: const Text("Stopwatch"),
+              ),
+              const SizedBox(
+                height: 16.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -61,18 +92,6 @@ class MainScreen extends StatelessWidget {
               ),
               const SizedBox(
                 height: 16.0,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const TodoList();
-                      },
-                    ),
-                  );
-                },
-                child: const Text("To-Do List"),
               ),
             ],
           ),
