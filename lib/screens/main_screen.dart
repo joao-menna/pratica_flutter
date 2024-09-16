@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pratica_flutter/screens/bmi_calculator.dart';
+import 'package:pratica_flutter/screens/calculator.dart';
 import 'package:pratica_flutter/screens/money_converter.dart';
 import 'package:pratica_flutter/screens/todo_list.dart';
 
@@ -26,6 +27,21 @@ class MainScreen extends StatelessWidget {
                   );
                 },
                 child: const Text("Money Converter"),
+              ),
+              const SizedBox(
+                height: 16.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const Calculator();
+                      },
+                    ),
+                  );
+                },
+                child: const Text("Calculator"),
               ),
               const SizedBox(
                 height: 16.0,
