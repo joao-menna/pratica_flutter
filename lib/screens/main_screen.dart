@@ -3,6 +3,7 @@ import 'package:pratica_flutter/screens/bmi_calculator.dart';
 import 'package:pratica_flutter/screens/calculator.dart';
 import 'package:pratica_flutter/screens/citation.dart';
 import 'package:pratica_flutter/screens/money_converter.dart';
+import 'package:pratica_flutter/screens/random_number.dart';
 import 'package:pratica_flutter/screens/stop_watch.dart';
 import 'package:pratica_flutter/screens/todo_list.dart';
 
@@ -108,6 +109,33 @@ class MainScreen extends StatelessWidget {
               ),
               const SizedBox(
                 height: 16.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const RandomNumber();
+                      },
+                    ),
+                  );
+                },
+                child: const Text("Random Number"),
+              ),
+              const SizedBox(
+                height: 16.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const Citation();
+                      },
+                    ),
+                  );
+                },
+                child: const Text("Name Giveaway"),
               ),
             ],
           ),
